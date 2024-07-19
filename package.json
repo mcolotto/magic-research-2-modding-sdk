@@ -1,6 +1,7 @@
 {
   "name": "magic-research-2-modding-sdk",
-  "version": "1.7.1",
+  "version": "1.7.2",
+  "minGameVersion": "1.7.0",
   "description": "Type declarations for Magic Research 2 modding",
   "main": "index.js",
   "types": "modding-decs/backend/modding/Modding.d.ts",

@@ -1,3 +1,3 @@
-const version = require("./package.json").version;
+const minGameVersion = require("./package.json").minGameVersion;
 
-export {version};
+export {minGameVersion};
