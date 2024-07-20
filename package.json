@@ -1,6 +1,6 @@
 {
   "name": "magic-research-2-modding-sdk",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "minGameVersion": "1.7.3",
   "description": "Type declarations for Magic Research 2 modding",
   "main": "index.js",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/mcolotto/magic-research-2-modding-sdk/issues"
   },
-  "homepage": "https://github.com/mcolotto/magic-research-2-modding-sdk#readme"
+  "homepage": "https://github.com/mcolotto/magic-research-2-modding-sdk#readme",
+  "dependencies": {
+    "react-native": "^0.74.3"
+  }
 }
