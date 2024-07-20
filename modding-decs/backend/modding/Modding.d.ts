@@ -19,7 +19,7 @@ import { areChallengesUnlocked, getCurrentChallenge } from "../challenges/Challe
 import { CombatClass, getCurrentCombatClass, getSelectableCombatClasses } from "../classes/CombatClasses";
 import { addEnding, getEndingData, hasEverTriggeredEnding, setGameEnding } from "../ending/Endings";
 import { Enhancement } from "../enhancement/Enhancement";
-import { isEnhancementEverUnlocked, isEnhancementUnlocked } from "../enhancement/Enhancements";
+import { isEnhancementEverUnlocked, isEnhancementUnlocked, registerEnhancement } from "../enhancement/Enhancements";
 import { buildEvent } from "../events/EventMessageBuilder";
 import { getGameEventById, triggerEvent } from "../events/Events";
 import { EventTag } from "../events/GameEvent";
@@ -496,7 +496,11 @@ export declare const MR2: {
     CombatClasses: DataStore<CombatClass>;
     getSelectableCombatClasses: typeof getSelectableCombatClasses;
     getCurrentCombatClass: typeof getCurrentCombatClass;
+    /**
+     * Use registerEnhancement to create new Enhancements. Do not use this.
+     */
     Enhancement: typeof Enhancement;
+    registerEnhancement: typeof registerEnhancement;
     Enhancements: DataStore<Enhancement>;
     EnhancementPurchaseListeners: DataStore<(state: import("../GameState").GameState, enhancement: Enhancement) => import("../GameState").GameState>;
     isEnhancementUnlocked: typeof isEnhancementUnlocked;
