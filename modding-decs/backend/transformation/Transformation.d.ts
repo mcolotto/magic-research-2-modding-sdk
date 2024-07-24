@@ -23,8 +23,10 @@ export type TransformationData = {
 };
 export declare function registerTransformation(tags: TransformationTag[][], transformationId: string, transformationDescription: string, transformationType: TransformationType, transformation: Transformation): void;
 export declare function deleteTransformation(transformationId: string): void;
+export declare const getTransformationsThatApply: (tags: TransformationTag[], prejoinedTags?: string) => Record<TransformationType, TransformationData[]>;
 export declare function applyMultiplierTransformations(tags: TransformationTag[], state: GameState, startingValue: number, params?: Record<string, any>): number;
-export declare function applyTransformations(tags: TransformationTag[], state: GameState, startingValue: number, params?: Record<string, any>, joinedTags?: string): number;
+export declare function applyTransformationsBase(tags: TransformationTag[], state: GameState, startingValue: number, params?: Record<string, any>, joinedTags?: string): number;
+export declare function applyTransformations(tags: TransformationTag[], state: GameState, startingValue: number, params?: Record<string, any>, joinedTags?: string): any;
 export declare function applyTransformationsCached(tags: TransformationTag[], state: GameState, startingValue: number, params?: Record<string, any>): number;
 export declare function applyTransformationsPermaCached(tags: TransformationTag[], state: GameState, startingValue: number, params?: Record<string, any>): number;
 export declare function clearTransformationCache(tags: Set<TransformationTag>, state: GameState): GameState;
@@ -35,3 +37,4 @@ export declare function explainTransformations(tags: TransformationTag[], state:
 }>>;
 export declare function explainTransformationsText(tags: TransformationTag[], state: GameState, startingValue: number, params?: Record<string, any>): string;
 export declare function explainTransformationsTextUncached(tags: TransformationTag[], state: GameState, startingValue: number, params?: Record<string, any>): string;
+export declare function loadTransformationsCommonLogic(): void;

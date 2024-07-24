@@ -27,7 +27,7 @@ export type AutocastConditionData = {
     values: string[];
 };
 export declare function translateSpellAutocastCategory(category: SpellAutocastCategory): string;
-export declare function getAutocastPointIncomePerSecPerWizard(state: GameState): number;
+export declare function getAutocastPointIncomePerSecPerWizard(state: GameState): any;
 export declare function explainAutocastPointIncomePerSecPerWizard(state: GameState): string;
 export declare function getWizardAmount(state: GameState): number;
 export declare function explainWizardAmount(state: GameState): string;

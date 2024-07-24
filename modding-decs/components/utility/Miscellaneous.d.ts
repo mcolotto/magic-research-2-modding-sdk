@@ -1,0 +1,50 @@
+import React from "react";
+import { MD3Theme } from "react-native-paper/lib/typescript/src/types";
+import { GameState } from "../../backend/GameState";
+import { SpellElementType } from "../../backend/spells/Elements";
+export declare function disabledColorByTheme(theme: MD3Theme): any;
+export declare function showImportFromFile(): boolean;
+export declare function showExportToFile(): boolean;
+export declare function elementColorByTheme(isDark: boolean, element: SpellElementType, lowContrast: boolean): any;
+export declare function getPrimaryButtonTextColor(theme: MD3Theme, disabled: boolean): string;
+export declare function DescriptionViewer(props: any): JSX.Element;
+export declare function EffectViewer(props: any): JSX.Element;
+export type SectionData = {
+    id: string;
+    name: string;
+    scrollable: boolean;
+    hideBottomResourceBar: boolean;
+    scrollView: boolean;
+    keepInMemory: boolean;
+    hotkey?: string;
+    isVisible?: (state: GameState) => boolean;
+    isBadged?: (state: GameState) => boolean;
+    fullScreen?: boolean;
+    Component?: React.ComponentType;
+};
+export declare function registerCustomSection(data: SectionData, beforeSectionId: string): void;
+export declare function getAllCustomSections(): SectionData[];
+export declare const getAllSections: () => SectionData[];
+export declare const getDefaultSectionOrder: () => string[];
+export declare function getAllMenuItems(state: GameState): string[];
+export declare function getSectionInfo(section: string): SectionData;
+export declare function useHorizontalScrollRef(): React.MutableRefObject<any>;
+export declare const MAX_OPEN_TABS = 5;
+export declare function useLayoutType(): {
+    wideLayout: boolean;
+    showMenu: boolean;
+    showSpellMenu: boolean;
+    showEventsMenu: boolean;
+    activeContentTabs: number;
+};
+export declare function getLayoutType(state: GameState, height: number, width: number): {
+    wideLayout: boolean;
+    showMenu: boolean;
+    showSpellMenu: boolean;
+    showEventsMenu: boolean;
+    activeContentTabs: number;
+};
+export declare function getInitialActiveSectionObjects(state: GameState): {
+    section: string;
+    key: number;
+}[];

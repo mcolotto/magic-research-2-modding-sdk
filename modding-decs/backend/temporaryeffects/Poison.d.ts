@@ -7,7 +7,7 @@ declare class Poison extends TemporaryEffect {
     getIcon(): any;
     isBeneficial(): boolean;
     poisonDoTAmountTags: (target: any) => any[];
-    getDamagePerSec(state: GameState, temporaryEffectData: TemporaryEffectData): number;
+    getDamagePerSec(state: GameState, temporaryEffectData: TemporaryEffectData): any;
     getDisplayDescription(state: GameState, temporaryEffectData: TemporaryEffectData): string;
     mergeData(state: GameState, oldData: TemporaryEffectData, newData: TemporaryEffectData, mode: "add" | "replace"): TemporaryEffectData;
 }

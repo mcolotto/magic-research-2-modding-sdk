@@ -22,4 +22,5 @@ export declare function calculateMaxOccurrencesInSynchroGrid(state: GameState, e
 declare function findSynchroBonusForElementsUncached(element1: SpellElementType, element2: SpellElementType): SynchroBonus | undefined;
 export declare const findSynchroBonusForElements: typeof findSynchroBonusForElementsUncached;
 export declare function hasNegativeSynchroBonusOnTile(state: GameState, x: number, y: number): boolean;
+export declare function loadSynchroBase(): void;
 export {};

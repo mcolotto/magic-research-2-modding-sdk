@@ -9,6 +9,10 @@ export declare function formatNumber(num: number, options?: {
     roundingMethod?: RoundingMethod;
     extraPrecision?: boolean;
 }): string;
+export declare function formatMultiplierBase(ratio: number, options?: {
+    showDecimals: boolean;
+    roundingMethod?: RoundingMethod;
+}): string;
 export declare function formatMultiplier(ratio: number, options?: {
     showDecimals: boolean;
     roundingMethod?: RoundingMethod;
@@ -18,3 +22,4 @@ export declare function formatTime(secs: number, options?: {
     showDecimals: boolean;
 }): string;
 export declare function formatTimeLong(duration: moment.Duration): string;
+export declare function loadFormattingUtils(): void;
