@@ -1,7 +1,7 @@
-import { GameState } from "../GameState";
-import { Resource } from "../Resources";
 import { Action, DoActionArgs } from "../action/Action";
 import { ActionArea, ActionSubcategory } from "../action/ActionAreas";
+import { GameState } from "../GameState";
+import { Resource } from "../Resources";
 import { SpellElementType } from "../spells/Elements";
 declare abstract class BoostActionBase extends Action {
     constructor();

@@ -639,11 +639,11 @@ export declare const MR2: Omit<{
      * These functions can be overridden by the mod.
      */
     NewGamePlus: {
-        getMaxPossibleDifficultyLevel: typeof import("../NewGamePlus").getMaxPossibleDifficultyLevel;
+        getMaxPossibleDifficultyLevel: (state: import("../GameState").GameState) => number;
         BASE_BOON_POINTS_PER_WORLD: number;
         MAX_DIFFICULTY_LEVEL: number;
         MAX_BOON_LEVEL: number;
-        triggerNewGamePlus: typeof import("../NewGamePlus").triggerNewGamePlus;
+        triggerNewGamePlus: (state: import("../GameState").GameState, sheerPowerLevel: number, storylineOracleLevel: number, blazingSpeedLevel: number, worldDifficultyLevel: number) => import("../GameState").GameState;
         getIncrementalPointsRequiredForLevel: (level: number) => number;
         getPointsRequiredForConfiguration: (sheerPowerLevel: number, storylineOracleLevel: number, blazingSpeedLevel: number) => number;
         getStorylinesToUnlockForSpecificOracleLevel: (storylineOracleLevel: number) => Storyline[];
@@ -661,6 +661,8 @@ export declare const MR2: Omit<{
         getNewGamePlusAccuracyAndDodgeMultiplier: (difficultyLevel: number) => number;
         getNewGamePlusOtherStatMultiplier: (difficultyLevel: number) => number;
         getNewGamePlusBoonPointsEarnedMultiplier: (difficultyLevel: number) => number;
+        getTotalAvailableBoonPoints: (state: import("../GameState").GameState) => number;
+        getNewBoonPointsAvailable: (state: import("../GameState").GameState) => number;
     };
     /**
      * The master listener. Gets called on every "change".

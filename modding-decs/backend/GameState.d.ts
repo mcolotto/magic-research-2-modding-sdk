@@ -1,18 +1,18 @@
 import React from "react";
-import { NotificationData } from "./Notification";
-import { QuickbarData } from "./Quickbar";
-import { Resource } from "./Resources";
 import { AutocastRuleStatus, AutocastStrategy } from "./autocast/Autocast";
 import { BuildingData } from "./buildings/Buildings";
 import { EventOccurrenceData } from "./events/Events";
 import { EventTag } from "./events/GameEvent";
 import { CombatStat } from "./exploration/CombatStats";
+import { DungeonFloor } from "./exploration/dungeons/DungeonFloor";
 import { CombatActionResult } from "./exploration/ExplorationActionResult";
 import { ExplorationStatus } from "./exploration/ExplorationStatus";
-import { DungeonFloor } from "./exploration/dungeons/DungeonFloor";
 import { FamiliarData } from "./familiars/Familiar";
 import { EquipmentSlot } from "./items/Equipment";
 import { ItemOccurrence, ItemStack } from "./items/Item";
+import { NotificationData } from "./Notification";
+import { QuickbarData } from "./Quickbar";
+import { Resource } from "./Resources";
 import { SpellcraftData, SpellcraftStrategy } from "./spellcraft/SpellcraftData";
 import { SpellElementType } from "./spells/Elements";
 import { TemporaryEffectData } from "./temporaryeffects/TemporaryEffects";
@@ -329,6 +329,7 @@ export type GameState = {
     global: GameGlobalState;
     options: GameOptionsState;
     temp: GameTempState;
+    saveSlot: number;
     isFake: boolean;
 };
 export type GameStateTransform = (oldState: GameState) => GameState;
@@ -343,7 +344,7 @@ export declare const GLOBAL_INITIAL_STATE: GameGlobalState;
 export declare const RUN_INITIAL_STATE: GameRunState;
 export declare const WORLD_INITIAL_STATE: GameWorldState;
 export declare const OPTIONS_INITIAL_STATE: GameOptionsState;
-export declare const INITIAL_STATE: GameState;
+export declare function createInitialState(saveSlot: number): GameState;
 export declare function createTempState(): GameTempState;
 export declare function createHypotheticalState(state: GameState): GameState;
 export type StateContextValue = GameState & {
@@ -358,5 +359,12 @@ export declare const StateContext: React.Context<{
     global: GameGlobalState;
     options: GameOptionsState;
     temp: GameTempState;
+    saveSlot: number;
     isFake: boolean;
 }>;
+export type SavedData = {
+    saves: GameState[];
+};
+export declare const INITIAL_SAVE_DATA: {
+    saves: any[];
+};

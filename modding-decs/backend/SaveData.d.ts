@@ -1,8 +1,10 @@
-import { GameState, GameStateTransform } from "./GameState";
+import { GameState, GameStateTransform, SavedData } from "./GameState";
 import { DataStore } from "./generic/DataStore";
-export declare function loadData(): Promise<GameState>;
+export declare function loadData(): Promise<SavedData>;
 export declare function saveData(state: GameState): Promise<void>;
 export declare function saveDataUnsafe(state: GameState): Promise<void>;
+export declare function getLatestSave(savedData: SavedData | null): GameState | null;
+export declare function makeSaveDataCompatible(obj: SavedData): SavedData;
 export declare function makeCompatible(obj: GameState): GameState;
 export declare function loadBase64Data(saveData: string): Promise<GameState | null>;
 export declare function deserializeBase64Data(saveData: string): Promise<Object | null>;

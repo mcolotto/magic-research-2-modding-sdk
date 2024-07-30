@@ -1,9 +1,9 @@
 import { GameState } from "./GameState";
 import { Storyline } from "./storylines/Storyline";
-export declare function getMaxPossibleDifficultyLevel(state: GameState): number;
-export declare function getTotalAvailableBoonPoints(state: GameState): number;
-export declare function getNewBoonPointsAvailable(state: GameState): number;
-export declare function triggerNewGamePlus(state: GameState, sheerPowerLevel: number, storylineOracleLevel: number, blazingSpeedLevel: number, worldDifficultyLevel: number): GameState;
+declare function getMaxPossibleDifficultyLevel(state: GameState): number;
+declare function getTotalAvailableBoonPoints(state: GameState): number;
+declare function getNewBoonPointsAvailable(state: GameState): number;
+declare function triggerNewGamePlus(state: GameState, sheerPowerLevel: number, storylineOracleLevel: number, blazingSpeedLevel: number, worldDifficultyLevel: number): GameState;
 declare function getIncrementalPointsRequiredForLevel(level: number): number;
 export declare function getTotalPointsRequiredForLevel(level: number): number;
 declare function getPointsRequiredForConfiguration(sheerPowerLevel: number, storylineOracleLevel: number, blazingSpeedLevel: number): number;
@@ -50,6 +50,8 @@ export declare const NewGamePlus: {
     getNewGamePlusAccuracyAndDodgeMultiplier: typeof getNewGamePlusAccuracyAndDodgeMultiplier;
     getNewGamePlusOtherStatMultiplier: typeof getNewGamePlusOtherStatMultiplier;
     getNewGamePlusBoonPointsEarnedMultiplier: typeof getNewGamePlusBoonPointsEarnedMultiplier;
+    getTotalAvailableBoonPoints: typeof getTotalAvailableBoonPoints;
+    getNewBoonPointsAvailable: typeof getNewBoonPointsAvailable;
 };
 export declare function loadNewGamePlus(): void;
 export {};
